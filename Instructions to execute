@@ -1,0 +1,57 @@
+1.Clone the Repository:
+
+  Clone the repository containing the microservices code to your local machine using Git.
+
+  	Open a terminal or command prompt on your local machine.
+
+	Navigate to the directory where you want to clone the repository.
+
+	Use the git clone command followed by the URL of the repository to clone it. Replace <repository-url> with the actual URL of the repository.
+
+	git clone <repository-url>
+        
+        For example, if the repository URL is https://github.com/your-username/microservices-repo.git, you would run:
+
+        git clone https://github.com/your-username/microservices-repo.git
+
+
+2.Database Setup:
+
+  Make sure you have MySQL installed and running on your system.
+  Create a database named product_order_management for storing user information, product data, and order history.
+
+3.Configure Database Connection:
+
+  Open the application.properties file in each microservice module (UserAuthenticationService, ProductOrderManagement, OrderProcessingService).
+  Update the database connection properties (url, username, password) to match your MySQL configuration.
+
+4.Build the Microservices:
+
+  Navigate to the root directory of each microservice module (UserAuthenticationService, ProductOrderManagement, OrderProcessingService) 
+  in your terminal.
+  
+  Execute the following Maven command to build each microservice:
+  mvn clean install
+
+5.Run the Microservices:
+
+  After successful build, run each microservice individually.
+  Navigate to the root directory of each microservice module in your terminal.
+  Execute the following command to run each microservice:
+  mvn spring-boot:run
+
+6.Access the APIs:
+
+ Once the microservices are running, you can access the APIs using tools like Postman or cURL.
+ Use the provided endpoints for user registration, product CRUD, order management
+
+
+7.Testing:
+
+  Execute unit tests for critical components and concurrency control mechanisms using the provided test cases.
+  Run the unit test cases using a test runner 
+
+8.Deployment (Optional):
+
+  If you want to deploy the microservices to a production environment, package them into executable JAR files or Docker containers and deploy them on your preferred hosting platform or cloud provider.
+  By following these steps, you should be able to set up, run, and test the microservices provided in the code.
